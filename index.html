@@ -166,6 +166,12 @@
       box-shadow: 0 0 0 4px var(--focus);
     }
 
+    /* ✅ Fix: dropdown options should be readable (black on white) */
+    select#statusFilter option{
+      color:#000;
+      background:#fff;
+    }
+
     .stats{
       display:flex;
       gap:10px;
@@ -392,6 +398,7 @@
     <div class="legend" aria-label="Legend">
       <span class="pill"><span class="swatch green"></span> In stock</span>
       <span class="pill"><span class="swatch orange"></span> On request</span>
+      <!-- ❌ Removed: Theme: Jet Black pill -->
     </div>
   </header>
 
@@ -1164,4 +1171,3 @@ render();
 </script>
 </body>
 </html>
-
